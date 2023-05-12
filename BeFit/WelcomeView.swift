@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct WelcomeView: View {
+    
     var body: some View {
         VStack {
             VStack(alignment: .center) {
@@ -23,13 +24,11 @@ struct WelcomeView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 4)
                 Spacer()
-                Button {
-                    print("redirect")
-                } label: {
+                NavigationLink(destination: LoginView()){
                     Text("START BUILD YOUR BODY")
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Colors.black)
+                    .foregroundColor(Colors.black)
                 }.buttonStyle(.borderedProminent)
                     .controlSize(.large)
                     .tint(Colors.yellow)
@@ -48,8 +47,6 @@ struct WelcomeView: View {
                         .padding(.top, 8)
                 }
                 .padding(.bottom, 24)
-
-
             }
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity).background(ZStack {
                 Colors.mainGray
@@ -57,7 +54,7 @@ struct WelcomeView: View {
                 .resizable()
                 .scaledToFill()
                 .opacity(0.1)
-        }.edgesIgnoringSafeArea([.bottom, .top]))
+        }.edgesIgnoringSafeArea(.all))
         .padding([.leading, .trailing], 24)
         
     }
@@ -65,6 +62,8 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
   static var previews: some View {
-      WelcomeView()
+      NavigationStack{
+          WelcomeView()
+      }
   }
 }
