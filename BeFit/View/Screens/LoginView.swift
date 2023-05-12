@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import Combine
 
 struct LoginView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -13,21 +15,35 @@ struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
     
+    func signin() {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+            } else {
+                print("success")
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
-            Text("WELCOME BACK")
+            Text("LOG IN TO YOUR ACCOUNT")
                 .font(.system(size: 28, weight: .bold))
                 .foregroundColor(Colors.white)
                 .multilineTextAlignment(.center)
-                .padding(.bottom, 20)
+                .padding(.bottom, 4)
+            Text("Welcome back! Select method to log in:")
+                .font(.system(size: 14, weight: .light))
+                .foregroundColor(Colors.white)
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 24)
             VStack(alignment: .leading) {
                 Text("E-mail")
                     .foregroundColor(Colors.white)
-                    .padding(.leading)
                     .font(.system(size: 16, weight: .bold))
                 TextField("E-mail", text: $email)
                     .padding()
-                    .border(Colors.white.opacity(0.4))
+                    .border(Colors.white.opacity(0.2))
                     .cornerRadius(8)
                     .foregroundColor(Colors.white)
                     .font(.system(size: 16, weight: .light))
@@ -37,11 +53,10 @@ struct LoginView: View {
             VStack(alignment: .leading) {
                 Text("Password")
                     .foregroundColor(Colors.white)
-                    .padding(.leading)
                     .font(.system(size: 16, weight: .bold))
                 SecureField("Password", text: $password)
                     .padding()
-                    .border(Colors.white.opacity(0.4))
+                    .border(Colors.white.opacity(0.2))
                     .cornerRadius(8)
                     .foregroundColor(Colors.white)
                     .font(.system(size: 16, weight: .light))
@@ -60,7 +75,7 @@ struct LoginView: View {
             }.padding(.bottom, 8)
             
             Button {
-               print("its ok")
+               signin()
             } label: {
                 Text("LOG IN")
                     .frame(minWidth: 0, maxWidth: .infinity)
@@ -88,9 +103,7 @@ struct LoginView: View {
                     print("any")
                 }
             }
-            Button {
-                print("redirect")
-            } label: {
+            NavigationLink(destination: SignupView()){
                 Text("DON'T HAVE ANY ACCOUNT?")
                     .font(.system(size: 12, weight: .light))
                     .foregroundColor(Colors.white)
@@ -127,25 +140,8 @@ struct LoginView: View {
     }
 }
 
-struct IconButton: View {
-    let image: String
-    let action: ()-> Void
-    var body : some View {
-        Button {
-            action()
-        } label: {
-            Image(image)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 26)
-        }.padding()
-            .tint(Colors.yellow)
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-    }
-}
-
 struct LoginView_Previews: PreviewProvider {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     static var previews: some View {
         NavigationStack {
             LoginView()

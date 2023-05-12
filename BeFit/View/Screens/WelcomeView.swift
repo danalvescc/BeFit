@@ -32,9 +32,7 @@ struct WelcomeView: View {
                 }.buttonStyle(.borderedProminent)
                     .controlSize(.large)
                     .tint(Colors.yellow)
-                Button {
-                    print("redirect")
-                } label: {
+                NavigationLink(destination: SignupView()){
                     Text("DON'T HAVE ANY ACCOUNT?")
                         .font(.system(size: 12, weight: .light))
                         .foregroundColor(Colors.white)

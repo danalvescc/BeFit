@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F44B8DF32A0EC9DA00E9FFD8 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */; };
+		F44B8DF82A0ECB4800E9FFD8 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */; };
+		F44B8DFA2A0ECFC500E9FFD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */; };
+		F44B8DFD2A0ED02600E9FFD8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F44B8DFC2A0ED02600E9FFD8 /* FirebaseAnalytics */; };
+		F44B8DFF2A0ED02600E9FFD8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F44B8DFE2A0ED02600E9FFD8 /* FirebaseAuth */; };
+		F44B8E012A0ED02600E9FFD8 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F44B8E002A0ED02600E9FFD8 /* FirebaseAuthCombine-Community */; };
 		F49C95742A0BED22009C8947 /* BeFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C95732A0BED22009C8947 /* BeFitApp.swift */; };
 		F49C95762A0BED22009C8947 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C95752A0BED22009C8947 /* ContentView.swift */; };
 		F49C95782A0BED24009C8947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49C95772A0BED24009C8947 /* Assets.xcassets */; };
@@ -17,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F49C95702A0BED22009C8947 /* BeFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49C95732A0BED22009C8947 /* BeFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFitApp.swift; sourceTree = "<group>"; };
 		F49C95752A0BED22009C8947 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,12 +41,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44B8DFD2A0ED02600E9FFD8 /* FirebaseAnalytics in Frameworks */,
+				F44B8E012A0ED02600E9FFD8 /* FirebaseAuthCombine-Community in Frameworks */,
+				F44B8DFF2A0ED02600E9FFD8 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F44B8DF42A0ECB0700E9FFD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F44B8DF62A0ECB1A00E9FFD8 /* Shared */,
+				F44B8DF52A0ECB1000E9FFD8 /* Screens */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F44B8DF52A0ECB1000E9FFD8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F49C95812A0BED7D009C8947 /* WelcomeView.swift */,
+				F4FFCBE42A0DC6E50039D69E /* LoginView.swift */,
+				F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F44B8DF62A0ECB1A00E9FFD8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		F49C95672A0BED22009C8947 = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +96,10 @@
 		F49C95722A0BED22009C8947 /* BeFit */ = {
 			isa = PBXGroup;
 			children = (
+				F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */,
+				F44B8DF42A0ECB0700E9FFD8 /* View */,
 				F49C95732A0BED22009C8947 /* BeFitApp.swift */,
 				F49C95752A0BED22009C8947 /* ContentView.swift */,
-				F49C95812A0BED7D009C8947 /* WelcomeView.swift */,
-				F4FFCBE42A0DC6E50039D69E /* LoginView.swift */,
 				F4FFCBE22A0BF3A70039D69E /* Colors.swift */,
 				F49C95772A0BED24009C8947 /* Assets.xcassets */,
 				F49C95792A0BED24009C8947 /* Preview Content */,
@@ -92,6 +131,11 @@
 			dependencies = (
 			);
 			name = BeFit;
+			packageProductDependencies = (
+				F44B8DFC2A0ED02600E9FFD8 /* FirebaseAnalytics */,
+				F44B8DFE2A0ED02600E9FFD8 /* FirebaseAuth */,
+				F44B8E002A0ED02600E9FFD8 /* FirebaseAuthCombine-Community */,
+			);
 			productName = BeFit;
 			productReference = F49C95702A0BED22009C8947 /* BeFit.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +164,9 @@
 				Base,
 			);
 			mainGroup = F49C95672A0BED22009C8947;
+			packageReferences = (
+				F44B8DFB2A0ED02500E9FFD8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F49C95712A0BED22009C8947 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F49C957B2A0BED24009C8947 /* Preview Assets.xcassets in Resources */,
+				F44B8DFA2A0ECFC500E9FFD8 /* GoogleService-Info.plist in Resources */,
 				F49C95782A0BED24009C8947 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +194,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44B8DF32A0EC9DA00E9FFD8 /* SignupView.swift in Sources */,
 				F49C95762A0BED22009C8947 /* ContentView.swift in Sources */,
+				F44B8DF82A0ECB4800E9FFD8 /* IconButton.swift in Sources */,
 				F4FFCBE32A0BF3A80039D69E /* Colors.swift in Sources */,
 				F49C95822A0BED7D009C8947 /* WelcomeView.swift in Sources */,
 				F4FFCBE52A0DC6E50039D69E /* LoginView.swift in Sources */,
@@ -276,10 +326,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeFit/Preview Content\"";
-				DEVELOPMENT_TEAM = UQGXLABK35;
+				DEVELOPMENT_TEAM = Q8Z68DCN99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -287,13 +338,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danalvescc.BeFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danalvescc.BeFitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,10 +358,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeFit/Preview Content\"";
-				DEVELOPMENT_TEAM = UQGXLABK35;
+				DEVELOPMENT_TEAM = Q8Z68DCN99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -316,13 +370,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danalvescc.BeFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danalvescc.BeFitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -351,6 +407,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F44B8DFB2A0ED02500E9FFD8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F44B8DFC2A0ED02600E9FFD8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F44B8DFB2A0ED02500E9FFD8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F44B8DFE2A0ED02600E9FFD8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F44B8DFB2A0ED02500E9FFD8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F44B8E002A0ED02600E9FFD8 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F44B8DFB2A0ED02500E9FFD8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F49C95682A0BED22009C8947 /* Project object */;
 }
