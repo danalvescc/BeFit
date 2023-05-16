@@ -28,38 +28,38 @@ struct LoginView: View {
     var body: some View {
         VStack {
             Text("LOG IN TO YOUR ACCOUNT")
-                .font(.system(size: 28, weight: .bold))
+                .font(.custom("RobotoCondensed-Bold", size: 32))
                 .foregroundColor(Colors.white)
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 4)
             Text("Welcome back! Select method to log in:")
-                .font(.system(size: 14, weight: .light))
+                .font(.custom("RobotoCondensed-Light", size: 18))
                 .foregroundColor(Colors.white)
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 24)
             VStack(alignment: .leading) {
                 Text("E-mail")
                     .foregroundColor(Colors.white)
-                    .font(.system(size: 16, weight: .bold))
+                    .font(.custom("RobotoCondensed-Regular", size: 18))
                 TextField("E-mail", text: $email)
                     .padding()
                     .border(Colors.white.opacity(0.2))
                     .cornerRadius(8)
                     .foregroundColor(Colors.white)
-                    .font(.system(size: 16, weight: .light))
+                    .font(.custom("RobotoCondensed-Regular", size: 18))
                     .keyboardType(.emailAddress)
                     .textInputAutocapitalization(.never)
             }.padding(.bottom, 8)
             VStack(alignment: .leading) {
                 Text("Password")
                     .foregroundColor(Colors.white)
-                    .font(.system(size: 16, weight: .bold))
+                    .font(.custom("RobotoCondensed-Regular", size: 18))
                 SecureField("Password", text: $password)
                     .padding()
                     .border(Colors.white.opacity(0.2))
                     .cornerRadius(8)
                     .foregroundColor(Colors.white)
-                    .font(.system(size: 16, weight: .light))
+                    .font(.custom("RobotoCondensed-Regular", size: 18))
                     .keyboardType(.emailAddress)
                     .textInputAutocapitalization(.never)
                 Button {
@@ -68,7 +68,7 @@ struct LoginView: View {
                     Text("Forgot password")
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                         .foregroundColor(Colors.white)
-                        .font(.system(size: 14, weight: .bold))
+                        .font(.custom("RobotoCondensed-Bold", size: 18))
                 }
 
             
@@ -79,7 +79,7 @@ struct LoginView: View {
             } label: {
                 Text("LOG IN")
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .font(.system(size: 18, weight: .bold))
+                    .font(.custom("RobotoCondensed-Bold", size: 18))
                 .foregroundColor(Colors.black)
             }.buttonStyle(.borderedProminent)
                 .controlSize(.large)
@@ -87,7 +87,7 @@ struct LoginView: View {
                 .padding(.top)
             
             Text("OR")
-                .font(.system(size: 12, weight: .light))
+                .font(.custom("RobotoCondensed-Light", size: 14))
                 .foregroundColor(Colors.white)
                 .multilineTextAlignment(.center)
                 .padding(.top)
@@ -105,12 +105,12 @@ struct LoginView: View {
             }
             NavigationLink(destination: SignupView()){
                 Text("DON'T HAVE ANY ACCOUNT?")
-                    .font(.system(size: 12, weight: .light))
+                    .font(.custom("RobotoCondensed-Light", size: 14))
                     .foregroundColor(Colors.white)
                     .multilineTextAlignment(.center)
                     .padding(.top, 8)
                 Text("REGISTER NOW")
-                    .font(.system(size: 12, weight: .bold))
+                    .font(.custom("RobotoCondensed-Bold", size: 14))
                     .foregroundColor(Colors.white)
                     .multilineTextAlignment(.center)
                     .padding(.top, 8)

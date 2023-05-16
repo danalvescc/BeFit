@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4105EAB2A1319A800A19108 /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4105EA52A1319A800A19108 /* RobotoCondensed-BoldItalic.ttf */; };
+		F4105EAC2A1319A800A19108 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4105EA62A1319A800A19108 /* RobotoCondensed-Light.ttf */; };
+		F4105EAD2A1319A800A19108 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4105EA72A1319A800A19108 /* RobotoCondensed-Regular.ttf */; };
+		F4105EAE2A1319A800A19108 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4105EA82A1319A800A19108 /* RobotoCondensed-LightItalic.ttf */; };
+		F4105EAF2A1319A800A19108 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4105EA92A1319A800A19108 /* RobotoCondensed-Italic.ttf */; };
+		F4105EB02A1319A800A19108 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4105EAA2A1319A800A19108 /* RobotoCondensed-Bold.ttf */; };
 		F44B8DF32A0EC9DA00E9FFD8 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */; };
 		F44B8DF82A0ECB4800E9FFD8 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */; };
 		F44B8DFA2A0ECFC500E9FFD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */; };
@@ -23,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4105EA52A1319A800A19108 /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F4105EA62A1319A800A19108 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		F4105EA72A1319A800A19108 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		F4105EA82A1319A800A19108 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		F4105EA92A1319A800A19108 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		F4105EAA2A1319A800A19108 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		F4105EB12A131CEB00A19108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -50,6 +63,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4105EA42A13197700A19108 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F4105EAA2A1319A800A19108 /* RobotoCondensed-Bold.ttf */,
+				F4105EA52A1319A800A19108 /* RobotoCondensed-BoldItalic.ttf */,
+				F4105EA92A1319A800A19108 /* RobotoCondensed-Italic.ttf */,
+				F4105EA62A1319A800A19108 /* RobotoCondensed-Light.ttf */,
+				F4105EA82A1319A800A19108 /* RobotoCondensed-LightItalic.ttf */,
+				F4105EA72A1319A800A19108 /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F44B8DF42A0ECB0700E9FFD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,10 +122,12 @@
 		F49C95722A0BED22009C8947 /* BeFit */ = {
 			isa = PBXGroup;
 			children = (
-				F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */,
+				F4105EB12A131CEB00A19108 /* Info.plist */,
+				F4105EA42A13197700A19108 /* Fonts */,
 				F44B8DF42A0ECB0700E9FFD8 /* View */,
 				F49C95732A0BED22009C8947 /* BeFitApp.swift */,
 				F49C95752A0BED22009C8947 /* ContentView.swift */,
+				F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */,
 				F4FFCBE22A0BF3A70039D69E /* Colors.swift */,
 				F49C95772A0BED24009C8947 /* Assets.xcassets */,
 				F49C95792A0BED24009C8947 /* Preview Content */,
@@ -181,9 +209,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4105EAD2A1319A800A19108 /* RobotoCondensed-Regular.ttf in Resources */,
+				F4105EAF2A1319A800A19108 /* RobotoCondensed-Italic.ttf in Resources */,
 				F49C957B2A0BED24009C8947 /* Preview Assets.xcassets in Resources */,
+				F4105EB02A1319A800A19108 /* RobotoCondensed-Bold.ttf in Resources */,
 				F44B8DFA2A0ECFC500E9FFD8 /* GoogleService-Info.plist in Resources */,
+				F4105EAB2A1319A800A19108 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				F49C95782A0BED24009C8947 /* Assets.xcassets in Resources */,
+				F4105EAE2A1319A800A19108 /* RobotoCondensed-LightItalic.ttf in Resources */,
+				F4105EAC2A1319A800A19108 /* RobotoCondensed-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +367,8 @@
 				DEVELOPMENT_TEAM = Q8Z68DCN99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeFit/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -365,6 +401,8 @@
 				DEVELOPMENT_TEAM = Q8Z68DCN99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeFit/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
