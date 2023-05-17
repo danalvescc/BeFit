@@ -11,19 +11,11 @@ import Combine
 
 struct LoginView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var authViewModel: AuthViewModel
     
-    @State var email: String = ""
-    @State var password: String = ""
+    @State var email: String = "test@befitapp.com"
+    @State var password: String = "danalves25"
     
-    func signin() {
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
-            } else {
-                print("success")
-            }
-        }
-    }
     
     var body: some View {
         VStack {
@@ -76,7 +68,7 @@ struct LoginView: View {
             }.padding(.bottom, 8)
             
             Button {
-               signin()
+                authViewModel.doSignin(email: email, password: password)
             } label: {
                 Text("LOG IN")
                     .frame(minWidth: 0, maxWidth: .infinity)
@@ -104,7 +96,7 @@ struct LoginView: View {
                     print("any")
                 }
             }
-            NavigationLink(destination: SignupView()){
+            NavigationLink(destination: SignupView().environmentObject(authViewModel)){
                 Text("DON'T HAVE ANY ACCOUNT?")
                     .font(.custom("RobotoCondensed-Light", size: 14))
                     .foregroundColor(Colors.white)

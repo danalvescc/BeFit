@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct WelcomeView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
         VStack {
@@ -24,7 +25,7 @@ struct WelcomeView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 2)
                 Spacer()
-                NavigationLink(destination: LoginView()){
+                NavigationLink(destination: LoginView().environmentObject(authViewModel)){
                     Text("START BUILD YOUR BODY")
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .font(.custom("RobotoCondensed-Bold", size: 24))
@@ -32,7 +33,7 @@ struct WelcomeView: View {
                 }.buttonStyle(.borderedProminent)
                     .controlSize(.large)
                     .tint(Colors.yellow)
-                NavigationLink(destination: SignupView()){
+                NavigationLink(destination: SignupView().environmentObject(authViewModel)){
                     Text("DON'T HAVE ANY ACCOUNT?")
                         .font(.custom("RobotoCondensed-Light", size: 14))
                         .foregroundColor(Colors.white)

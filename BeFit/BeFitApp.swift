@@ -23,7 +23,7 @@ struct BeFitApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                WelcomeView()
+                ContentView()
             }
         }
     }

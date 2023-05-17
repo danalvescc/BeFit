@@ -10,6 +10,7 @@ import FirebaseAuth
 
 struct SignupView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     @State var name: String = ""
     @State var email: String = ""
@@ -78,7 +79,7 @@ struct SignupView: View {
             }.padding(.bottom, 8)
             
             Button {
-               print("its ok")
+                authViewModel.doSignUp(email: email, password: password, name: name)
             } label: {
                 Text("CREATE ACCOUNT")
                     .frame(minWidth: 0, maxWidth: .infinity)
