@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var authViewModel: AuthViewModel
+    @EnvironmentObject var authViewModel: AuthViewModel
     var body: some View {
         VStack {
             Text(authViewModel.name)
@@ -27,7 +27,7 @@ struct HomeView_Previews: PreviewProvider {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     static var previews: some View {
         NavigationStack {
-            HomeView(authViewModel: AuthViewModel())
-        }
+            HomeView()
+        }.environmentObject(AuthViewModel())
     }
 }

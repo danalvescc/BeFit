@@ -11,11 +11,16 @@ struct ContentView: View {
     @StateObject var authViewModel = AuthViewModel()
     
     var body: some View {
-        if authViewModel.isLogged {
-            HomeView(authViewModel: authViewModel)
-        } else {
-            WelcomeView()
-                .environmentObject(authViewModel)
+        NavigationView {
+            if authViewModel.isLogged {
+                HomeView()
+            } else {
+                WelcomeView()
+            }
+        }
+        .environmentObject(authViewModel)
+        .onAppear {
+            authViewModel.loadUserData()
         }
     }
 }

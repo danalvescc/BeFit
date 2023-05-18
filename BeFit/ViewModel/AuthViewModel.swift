@@ -16,15 +16,18 @@ class AuthViewModel: ObservableObject {
     @Published var isLogged = false
     
     private let firebaseAuth = Auth.auth()
-    
-    init() {
+
+    func loadUserData() {
         let user = firebaseAuth.currentUser
         if let user = user {
+            print("isLogged")
             self.uid = user.uid
             self.email = user.email ?? ""
             self.name = user.displayName ?? ""
             self.isLogged = true
-            print(uid)
+        } else {
+            self.isLogged = false
+            print("isNotLogged")
         }
     }
     
@@ -38,10 +41,7 @@ class AuthViewModel: ObservableObject {
             if error != nil {
                 print(error?.localizedDescription ?? "")
             } else {
-                self.uid = result?.user.uid ?? ""
-                self.email = result?.user.email ?? ""
-                self.name = result?.user.displayName ?? ""
-                self.isLogged = true
+                self.loadUserData()
             }
         }
     }
@@ -56,12 +56,8 @@ class AuthViewModel: ObservableObject {
             if error != nil {
                 print(error?.localizedDescription ?? "")
             } else {
-                
-                self.uid = result?.user.uid ?? ""
-                self.email = result?.user.email ?? ""
                 self.updateName(name: name)
-                self.name = name
-                self.isLogged = true
+                self.loadUserData()
             }
         }
     }

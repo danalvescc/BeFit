@@ -25,7 +25,7 @@ struct WelcomeView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 2)
                 Spacer()
-                NavigationLink(destination: LoginView().environmentObject(authViewModel)){
+                NavigationLink(destination: LoginView()){
                     Text("START BUILD YOUR BODY")
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .font(.custom("RobotoCondensed-Bold", size: 24))
@@ -64,5 +64,6 @@ struct WelcomeView_Previews: PreviewProvider {
       NavigationStack{
           WelcomeView()
       }
+      .environmentObject(AuthViewModel())
   }
 }
