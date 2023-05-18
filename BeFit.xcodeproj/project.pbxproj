@@ -21,6 +21,7 @@
 		F44B8DFD2A0ED02600E9FFD8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F44B8DFC2A0ED02600E9FFD8 /* FirebaseAnalytics */; };
 		F44B8DFF2A0ED02600E9FFD8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F44B8DFE2A0ED02600E9FFD8 /* FirebaseAuth */; };
 		F44B8E012A0ED02600E9FFD8 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F44B8E002A0ED02600E9FFD8 /* FirebaseAuthCombine-Community */; };
+		F48A87CF2A15B06400B9AB43 /* InitialQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A87CE2A15B06400B9AB43 /* InitialQuestions.swift */; };
 		F49C95742A0BED22009C8947 /* BeFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C95732A0BED22009C8947 /* BeFitApp.swift */; };
 		F49C95762A0BED22009C8947 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C95752A0BED22009C8947 /* ContentView.swift */; };
 		F49C95782A0BED24009C8947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49C95772A0BED24009C8947 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F48A87CE2A15B06400B9AB43 /* InitialQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialQuestions.swift; sourceTree = "<group>"; };
 		F49C95702A0BED22009C8947 /* BeFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49C95732A0BED22009C8947 /* BeFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFitApp.swift; sourceTree = "<group>"; };
 		F49C95752A0BED22009C8947 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				F4105EB42A1331AE00A19108 /* User.swift */,
+				F48A87CE2A15B06400B9AB43 /* InitialQuestions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				F44B8DF32A0EC9DA00E9FFD8 /* SignupView.swift in Sources */,
 				F49C95762A0BED22009C8947 /* ContentView.swift in Sources */,
 				F4105EB52A1331AE00A19108 /* User.swift in Sources */,
+				F48A87CF2A15B06400B9AB43 /* InitialQuestions.swift in Sources */,
 				F4CD9B6A2A147F3700369D41 /* HomeView.swift in Sources */,
 				F44B8DF82A0ECB4800E9FFD8 /* IconButton.swift in Sources */,
 				F4FFCBE32A0BF3A80039D69E /* Colors.swift in Sources */,
