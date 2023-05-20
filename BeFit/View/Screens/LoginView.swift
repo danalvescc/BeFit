@@ -19,42 +19,17 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
-            Text("LOG IN TO YOUR ACCOUNT")
-                .font(.custom("RobotoCondensed-Bold", size: 32))
-                .foregroundColor(Colors.white)
-                .multilineTextAlignment(.center)
+            TitleComponent(text: "LOG IN TO YOUR ACCOUNT")
                 .padding(.bottom, 4)
             Text("Welcome back! Select method to log in:")
                 .font(.custom("RobotoCondensed-Light", size: 18))
                 .foregroundColor(Colors.white)
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 24)
+            TextFieldComponent(title: "E-mail", placeholder: "Type your e-mail...", keyboardType: .emailAddress, value: $email)
+                .padding(.bottom, 8)
+            TextFieldComponent(title: "Password", placeholder: "Type your password...", value: $password, isSecurity: true)
             VStack(alignment: .leading) {
-                Text("E-mail")
-                    .foregroundColor(Colors.white)
-                    .font(.custom("RobotoCondensed-Regular", size: 18))
-                TextField("E-mail", text: $email)
-                    .padding()
-                    .background(Colors.secondGray)
-                    .foregroundColor(Colors.white)
-                    .cornerRadius(8)
-                    
-                    .font(.custom("RobotoCondensed-Regular", size: 18))
-                    .keyboardType(.emailAddress)
-                    .textInputAutocapitalization(.never)
-            }.padding(.bottom, 8)
-            VStack(alignment: .leading) {
-                Text("Password")
-                    .foregroundColor(Colors.white)
-                    .font(.custom("RobotoCondensed-Regular", size: 18))
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(Colors.secondGray)
-                    .foregroundColor(Colors.white)
-                    .cornerRadius(8)
-                    .font(.custom("RobotoCondensed-Regular", size: 18))
-                    .keyboardType(.emailAddress)
-                    .textInputAutocapitalization(.never)
                 Button {
                     print("forgot password")
                 } label: {
@@ -63,8 +38,6 @@ struct LoginView: View {
                         .foregroundColor(Colors.white)
                         .font(.custom("RobotoCondensed-Bold", size: 18))
                 }
-
-            
             }.padding(.bottom, 8)
             
             Button {

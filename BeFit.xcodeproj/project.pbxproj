@@ -28,6 +28,11 @@
 		F49C957B2A0BED24009C8947 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49C957A2A0BED24009C8947 /* Preview Assets.xcassets */; };
 		F49C95822A0BED7D009C8947 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C95812A0BED7D009C8947 /* WelcomeView.swift */; };
 		F4CD9B6A2A147F3700369D41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD9B692A147F3600369D41 /* HomeView.swift */; };
+		F4E01C502A18371800A072D8 /* PersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E01C4F2A18371800A072D8 /* PersonalInfoView.swift */; };
+		F4E01C522A183E1100A072D8 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E01C512A183E1100A072D8 /* TitleComponent.swift */; };
+		F4E01C542A1843E800A072D8 /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E01C532A1843E800A072D8 /* TextFieldComponent.swift */; };
+		F4E01C562A18505100A072D8 /* PickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E01C552A18505100A072D8 /* PickerComponent.swift */; };
+		F4E01C582A1858E100A072D8 /* DatePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E01C572A1858E100A072D8 /* DatePickerComponent.swift */; };
 		F4FFCBE32A0BF3A80039D69E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FFCBE22A0BF3A70039D69E /* Colors.swift */; };
 		F4FFCBE52A0DC6E50039D69E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FFCBE42A0DC6E50039D69E /* LoginView.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +58,11 @@
 		F49C957A2A0BED24009C8947 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F49C95812A0BED7D009C8947 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		F4CD9B692A147F3600369D41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F4E01C4F2A18371800A072D8 /* PersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
+		F4E01C512A183E1100A072D8 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
+		F4E01C532A1843E800A072D8 /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
+		F4E01C552A18505100A072D8 /* PickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerComponent.swift; sourceTree = "<group>"; };
+		F4E01C572A1858E100A072D8 /* DatePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerComponent.swift; sourceTree = "<group>"; };
 		F4FFCBE22A0BF3A70039D69E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F4FFCBE42A0DC6E50039D69E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +135,7 @@
 				F49C95812A0BED7D009C8947 /* WelcomeView.swift */,
 				F4FFCBE42A0DC6E50039D69E /* LoginView.swift */,
 				F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */,
+				F4E01C4F2A18371800A072D8 /* PersonalInfoView.swift */,
 				F4CD9B692A147F3600369D41 /* HomeView.swift */,
 			);
 			path = Screens;
@@ -134,6 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */,
+				F4E01C512A183E1100A072D8 /* TitleComponent.swift */,
+				F4E01C532A1843E800A072D8 /* TextFieldComponent.swift */,
+				F4E01C572A1858E100A072D8 /* DatePickerComponent.swift */,
+				F4E01C552A18505100A072D8 /* PickerComponent.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -264,15 +279,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E01C522A183E1100A072D8 /* TitleComponent.swift in Sources */,
 				F44B8DF32A0EC9DA00E9FFD8 /* SignupView.swift in Sources */,
 				F49C95762A0BED22009C8947 /* ContentView.swift in Sources */,
+				F4E01C582A1858E100A072D8 /* DatePickerComponent.swift in Sources */,
 				F4105EB52A1331AE00A19108 /* User.swift in Sources */,
 				F48A87CF2A15B06400B9AB43 /* InitialQuestions.swift in Sources */,
 				F4CD9B6A2A147F3700369D41 /* HomeView.swift in Sources */,
+				F4E01C502A18371800A072D8 /* PersonalInfoView.swift in Sources */,
+				F4E01C562A18505100A072D8 /* PickerComponent.swift in Sources */,
 				F44B8DF82A0ECB4800E9FFD8 /* IconButton.swift in Sources */,
 				F4FFCBE32A0BF3A80039D69E /* Colors.swift in Sources */,
 				F49C95822A0BED7D009C8947 /* WelcomeView.swift in Sources */,
 				F4FFCBE52A0DC6E50039D69E /* LoginView.swift in Sources */,
+				F4E01C542A1843E800A072D8 /* TextFieldComponent.swift in Sources */,
 				F49C95742A0BED22009C8947 /* BeFitApp.swift in Sources */,
 				F4105EB82A1335EC00A19108 /* AuthViewModel.swift in Sources */,
 			);
@@ -404,7 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeFit/Preview Content\"";
-				DEVELOPMENT_TEAM = Q8Z68DCN99;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BeFit/Info.plist;
@@ -438,7 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeFit/Preview Content\"";
-				DEVELOPMENT_TEAM = Q8Z68DCN99;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BeFit/Info.plist;

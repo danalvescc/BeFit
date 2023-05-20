@@ -19,10 +19,7 @@ struct WelcomeView: View {
                     .foregroundColor(Colors.white)
                     .multilineTextAlignment(.center)
                     .padding(.top, 48)
-                Text("GET THE SHAPE YOU'VE ALWAYS DREAMED")
-                    .font(.custom("RobotoCondensed-Bold", size: 32, relativeTo: .title))
-                    .foregroundColor(Colors.white)
-                    .multilineTextAlignment(.center)
+                TitleComponent(text: "GET THE SHAPE YOU'VE ALWAYS DREAMED")
                     .padding(.top, 2)
                 Spacer()
                 NavigationLink(destination: LoginView()){

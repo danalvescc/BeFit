@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             if authViewModel.isLogged {
-                HomeView()
+                PersonalInfoView()
             } else {
                 WelcomeView()
             }
