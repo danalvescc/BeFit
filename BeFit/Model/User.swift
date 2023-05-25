@@ -7,7 +7,45 @@
 
 import Foundation
 
-//struct User: ObservableObject{
-//    @Published var name = String()
-//    @Published var email = String()
-//}
+struct User {
+    struct PersonalData {
+        var name: String
+        var email: String
+        var birthDate: Date
+        var height: Double
+        var weight: Double
+    }
+    
+    struct Exercise {
+        var name: String
+        var sets: Int
+        var reps: Int
+        var mainMuscle: String
+        var seondaryMuscles: [String]
+    }
+    
+    struct TrainingSession {
+        var id: Int
+        var day: Int
+        var muscles: [String]
+        var exercises: [Exercise]
+    }
+    
+    struct Training {
+        var id: Int
+        var createdDate: Date
+        var perWeek: Int
+        var training: [TrainingSession]
+    }
+    
+    struct TrainingRealized {
+        var date: Date
+        var duration: Int
+        var TrainingListId: Int
+        var TrainingSessionId: Int
+    }
+    
+    var personalData: PersonalData
+    var trainings: [Training] = []
+    var trainingHistory: [TrainingRealized] = []
+}

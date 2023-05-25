@@ -11,20 +11,7 @@ import FirebaseAuth
 struct SignupView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var authViewModel: AuthViewModel
-    
-    @State var name: String = ""
-    @State var email: String = ""
-    @State var password: String = ""
-    
-    func signup() {
-        Auth.auth().createUser(withEmail: email, password: password){ (result, error) in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
-            } else {
-                print("success")
-            }
-        }
-    }
+    @StateObject var signupViewMode = SignupViewMode()
     
     var body: some View {
         VStack {
@@ -35,12 +22,12 @@ struct SignupView: View {
                 .foregroundColor(Colors.white)
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 24)
-            TextFieldComponent(title: "Name", placeholder: "Type your name...", value: $name).padding(.bottom, 8)
-            TextFieldComponent(title: "E-mail", placeholder: "Type your e-mail...", keyboardType: .emailAddress, value: $email).padding(.bottom, 8)
-            TextFieldComponent(title: "Password", placeholder: "Type your password...", keyboardType: .default, value: $password, isSecurity: true).padding(.bottom, 8)
+            TextFieldComponent(title: "Name", placeholder: "Type your name...", value: $signupViewMode.name).padding(.bottom, 8)
+            TextFieldComponent(title: "E-mail", placeholder: "Type your e-mail...", keyboardType: .emailAddress, value: $signupViewMode.email).padding(.bottom, 8)
+            TextFieldComponent(title: "Password", placeholder: "Type your password...", keyboardType: .default, value: $signupViewMode.password, isSecurity: true).padding(.bottom, 8)
             
             Button {
-                authViewModel.doSignUp(email: email, password: password, name: name)
+                authViewModel.doSignUp(email: signupViewMode.email, password: signupViewMode.password, name: signupViewMode.name)
             } label: {
                 Text("CREATE ACCOUNT")
                     .frame(minWidth: 0, maxWidth: .infinity)

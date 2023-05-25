@@ -14,6 +14,7 @@ final class Colors {
     static let black = Color.black
     static let yellow = Color("yellow")
     static let secondGray = Color("secondGray")
+    static let green = Color("green")
 }
 
 

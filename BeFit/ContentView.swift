@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var authViewModel = AuthViewModel()
+    @StateObject var userViewModel = UserViewModel()
     
     var body: some View {
         NavigationView {
@@ -19,6 +20,7 @@ struct ContentView: View {
             }
         }
         .environmentObject(authViewModel)
+        .environmentObject(userViewModel)
         .onAppear {
             authViewModel.loadUserData()
         }
