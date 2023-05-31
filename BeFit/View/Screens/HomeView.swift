@@ -10,11 +10,14 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var navigationRoutes: NavigationRoutes
+    
     var body: some View {
         VStack {
             Text(authViewModel.name)
             Button {
-                authViewModel.doLogout()
+                navigationRoutes.root()
+//                authViewModel.doLogout()
             } label: {
                 Text("Logout")
             }

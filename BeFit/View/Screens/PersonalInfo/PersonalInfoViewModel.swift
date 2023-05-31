@@ -8,19 +8,36 @@
 import Foundation
 import SwiftUI
 
+
 class PersonalInfoViewModel: ObservableObject {
-    @Published var genrer = String()
+    var genres = ["Male", "Famale", "Non Defined"]
+    var goals = ["Hypertrophy", "Muscle Definition", "Lose Weight"]
+    var experienceLevel = ["Beginner", "Intermediary", "Advanced"]
+    var workoutDays = ["1", "2", "3", "4", "5", "6", "7"]
+    @Published var genrer = "Male"
     @Published var birthDate = Date()
-    @Published var weight = Double()
-    @Published var height = Double()
-    @Published var goal = String()
-    @Published var experience = String()
-    @Published var frequency = String()
+    @Published var weight = String()
+    @Published var height = String()
+    @Published var goal = "Hypertrophy"
+    @Published var experience = "Beginner"
+    @Published var frequency = "5"
+    @Published var goHome = false
     
-    @EnvironmentObject var userViewModel: UserViewModel
-    @EnvironmentObject var authViewModel: AuthViewModel
+    var authViewModel: AuthViewModel?
+    var userViewModel: UserViewModel?
+    
+    func setup(authViewModel: AuthViewModel, userViewModel: UserViewModel) {
+        self.authViewModel = authViewModel
+        self.userViewModel = userViewModel
+    }
     
     func saveData() {
-        var user = User(personalData: User.PersonalData(name: authViewModel.name, email: authViewModel.email, birthDate: birthDate, height: height, weight: weight))
+        let doubleWeight = Double(weight) ?? 0
+        let doubleHeight = Double(height) ?? 0
+        let user = User(personalData: User.PersonalData(name: authViewModel!.name, email: authViewModel!.email, birthDate: birthDate, height: doubleWeight, weight: doubleHeight))
+        
+        userViewModel!.saveUser(user)
+        
+        self.goHome = true
     }
 }

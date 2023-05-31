@@ -13,21 +13,36 @@ class AuthViewModel: ObservableObject {
     @Published var name = String()
     @Published var uid = String()
     @Published var photoURL = String()
-    @Published var isLogged = false
+    @Published var isLogged: Bool = false
+    private(set) var navigationRoutes: NavigationRoutes?
     
     private let firebaseAuth = Auth.auth()
+    
+    init() {
+//        firebaseAuth.addStateDidChangeListener { auth, user in
+//            print("here")
+//            self.loadUserData()
+//        }
+    }
+    
+    func setup(navigationRoutes: NavigationRoutes) {
+        self.navigationRoutes = navigationRoutes
+    }
 
     func loadUserData() {
         let user = firebaseAuth.currentUser
         if let user = user {
-            print("isLogged")
+            print("😁: Logged with success")
             self.uid = user.uid
             self.email = user.email ?? ""
             self.name = user.displayName ?? ""
             self.isLogged = true
         } else {
             self.isLogged = false
-            print("isNotLogged")
+            self.uid = ""
+            self.email = ""
+            self.name = ""
+            print("🥺: Is not logged")
         }
     }
     
@@ -41,7 +56,8 @@ class AuthViewModel: ObservableObject {
             if error != nil {
                 print(error?.localizedDescription ?? "")
             } else {
-                self.loadUserData()
+                print("😁: Logged with success")
+                self.navigationRoutes?.navigate(.HomeView)
             }
         }
     }
@@ -57,7 +73,6 @@ class AuthViewModel: ObservableObject {
                 print(error?.localizedDescription ?? "")
             } else {
                 self.updateName(name: name)
-                self.loadUserData()
             }
         }
     }
@@ -75,7 +90,9 @@ class AuthViewModel: ObservableObject {
         let changeRequest = firebaseAuth.currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = name
         changeRequest?.commitChanges { error in
-            //
+            if error == nil {
+                self.name = name
+            }
         }
     }
 }

@@ -12,12 +12,9 @@ import SwiftUI
 
 
 struct PersonalInfoView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var userViewModel: UserViewModel
     @StateObject var personalInfoViewModel = PersonalInfoViewModel()
-    
-    var genres = ["Male", "Famale", "Non Defined"]
-    var goals = ["Hypertrophy", "Muscle Definition", "Lose Weight"]
-    var experienceLevel = ["Beginner", "Intermediary", "Advanced"]
-    var workoutDays = ["1", "2", "3", "4", "5", "6", "7"]
     
     var body: some View {
 //        VStack {
@@ -47,7 +44,7 @@ struct PersonalInfoView: View {
             Form {
                 Section {
                     Picker("Gender", selection: $personalInfoViewModel.genrer) {
-                        ForEach(genres, id: \.self) {
+                        ForEach(personalInfoViewModel.genres, id: \.self) {
                             Text($0)
                         }
                     }
@@ -59,17 +56,17 @@ struct PersonalInfoView: View {
                 }
                 Section {
                     Picker("Goal", selection: $personalInfoViewModel.goal) {
-                        ForEach(goals, id: \.self) {
+                        ForEach(personalInfoViewModel.goals, id: \.self) {
                             Text(String($0))
                         }
                     }
                     Picker("Experience", selection: $personalInfoViewModel.experience) {
-                        ForEach(experienceLevel, id: \.self) {
+                        ForEach(personalInfoViewModel.experienceLevel, id: \.self) {
                             Text(String($0))
                         }
                     }
                     Picker("Workout Days per week", selection: $personalInfoViewModel.frequency) {
-                        ForEach(workoutDays, id: \.self) {
+                        ForEach(personalInfoViewModel.workoutDays, id: \.self) {
                             Text($0)
                         }
                     }
@@ -77,21 +74,37 @@ struct PersonalInfoView: View {
                     Text("WORKOUT").foregroundColor(Color.gray)
                 }
                 Button {
-                    print("teste")
+                    personalInfoViewModel.saveData()
                 } label: {
                     Text("Confirm").frame(minWidth: 0, maxWidth: .infinity)
                 }
             }
             .scrollContentBackground(.hidden)
+            NavigationLink("", isActive: $personalInfoViewModel.goHome) {
+                HomeView()
+            }
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Colors.mainGray)
+        .toolbar {
+            ToolbarItem {
+                Button {
+                    authViewModel.doLogout()
+                } label: {
+                    Text("Logout")
+                }
+
+            }
+        }
+        .onAppear {
+            personalInfoViewModel.setup(authViewModel: authViewModel, userViewModel: userViewModel)
+        }
     }
 }
 
 struct PersonalInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             PersonalInfoView()
-        }.environmentObject(AuthViewModel())
+        }.environmentObject(AuthViewModel()).environmentObject(UserViewModel())
     }
 }

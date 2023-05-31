@@ -18,6 +18,7 @@
 		F44B8DF32A0EC9DA00E9FFD8 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */; };
 		F44B8DF82A0ECB4800E9FFD8 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */; };
 		F44B8DFA2A0ECFC500E9FFD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */; };
+		F44E30672A26CC78007E320F /* NavigationRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E30662A26CC78007E320F /* NavigationRoutes.swift */; };
 		F48A87CF2A15B06400B9AB43 /* InitialQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A87CE2A15B06400B9AB43 /* InitialQuestions.swift */; };
 		F49C95742A0BED22009C8947 /* BeFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C95732A0BED22009C8947 /* BeFitApp.swift */; };
 		F49C95762A0BED22009C8947 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C95752A0BED22009C8947 /* ContentView.swift */; };
@@ -61,6 +62,7 @@
 		F44B8DF22A0EC9DA00E9FFD8 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F44B8DF72A0ECB4800E9FFD8 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		F44B8DF92A0ECFC500E9FFD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F44E30662A26CC78007E320F /* NavigationRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoutes.swift; sourceTree = "<group>"; };
 		F48A87CE2A15B06400B9AB43 /* InitialQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialQuestions.swift; sourceTree = "<group>"; };
 		F49C95702A0BED22009C8947 /* BeFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49C95732A0BED22009C8947 /* BeFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFitApp.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				F4105EB72A1335EC00A19108 /* AuthViewModel.swift */,
 				F4FB198A2A1EF10700B43280 /* UserViewModel.swift */,
+				F44E30662A26CC78007E320F /* NavigationRoutes.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,9 +160,9 @@
 			children = (
 				F49C95812A0BED7D009C8947 /* WelcomeView.swift */,
 				F4FFCBE42A0DC6E50039D69E /* LoginView.swift */,
+				F4CD9B692A147F3600369D41 /* HomeView.swift */,
 				F4FB19872A1EEBC000B43280 /* PersonalInfo */,
 				F4E01C712A18F4F600A072D8 /* Signup */,
-				F4CD9B692A147F3600369D41 /* HomeView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				F4FFCBE52A0DC6E50039D69E /* LoginView.swift in Sources */,
 				F4E01C542A1843E800A072D8 /* TextFieldComponent.swift in Sources */,
 				F49C95742A0BED22009C8947 /* BeFitApp.swift in Sources */,
+				F44E30672A26CC78007E320F /* NavigationRoutes.swift in Sources */,
 				F4105EB82A1335EC00A19108 /* AuthViewModel.swift in Sources */,
 				F4FB19892A1EEBEB00B43280 /* PersonalInfoViewModel.swift in Sources */,
 			);

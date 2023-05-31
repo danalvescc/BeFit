@@ -12,6 +12,7 @@ import Combine
 struct LoginView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var navigationRoutes: NavigationRoutes
     
     @State var email: String = "test@befitapp.com"
     @State var password: String = "danalves25"
@@ -102,6 +103,9 @@ struct LoginView: View {
                 }
                 
             }
+            .onAppear {
+                authViewModel.setup(navigationRoutes: navigationRoutes)
+            }
         
     }
 }
@@ -112,6 +116,7 @@ struct LoginView_Previews: PreviewProvider {
         NavigationStack {
             LoginView()
                 .environmentObject(AuthViewModel())
+                .environmentObject(NavigationRoutes())
         }
     }
 }
