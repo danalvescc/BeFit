@@ -103,10 +103,6 @@ struct LoginView: View {
                 }
                 
             }
-            .onAppear {
-                authViewModel.setup(navigationRoutes: navigationRoutes)
-            }
-        
     }
 }
 

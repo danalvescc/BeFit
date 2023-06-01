@@ -80,9 +80,6 @@ struct PersonalInfoView: View {
                 }
             }
             .scrollContentBackground(.hidden)
-            NavigationLink("", isActive: $personalInfoViewModel.goHome) {
-                HomeView()
-            }
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(Colors.mainGray)
         .toolbar {

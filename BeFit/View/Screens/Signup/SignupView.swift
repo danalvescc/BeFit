@@ -11,6 +11,7 @@ import FirebaseAuth
 struct SignupView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var navigationRoutes: NavigationRoutes
     @StateObject var signupViewMode = SignupViewMode()
     
     var body: some View {

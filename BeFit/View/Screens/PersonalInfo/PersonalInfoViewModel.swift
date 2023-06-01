@@ -34,7 +34,7 @@ class PersonalInfoViewModel: ObservableObject {
     func saveData() {
         let doubleWeight = Double(weight) ?? 0
         let doubleHeight = Double(height) ?? 0
-        let user = User(personalData: User.PersonalData(name: authViewModel!.name, email: authViewModel!.email, birthDate: birthDate, height: doubleWeight, weight: doubleHeight))
+        let user = User(personalData: User.PersonalData(name: authViewModel!.name, email: authViewModel!.email, birthDate: birthDate, height: doubleWeight, weight: doubleHeight, goal: goal, experience: experience, frequency: Int(frequency) ?? 0))
         
         userViewModel!.saveUser(user)
         

@@ -16,10 +16,12 @@ struct ContentView: View {
             WelcomeView()
                 .navigationDestination(for: Routes.self){ route in
                     switch route {
-                    case .HomeView:
-                        HomeView()
-                    case .WelcomeView:
-                        WelcomeView()
+                        case .HomeView:
+                            HomeView()
+                        case .WelcomeView:
+                            WelcomeView()
+                        case .PersonalInfoView:
+                            PersonalInfoView()
                     }
                 }
         }

@@ -11,6 +11,7 @@ import SwiftUI
 enum Routes: String {
     case HomeView = "Home"
     case WelcomeView = "Welcome"
+    case PersonalInfoView = "Personal Info"
 //    case SigninView = "Sign In"
 //    case SignupView = "Sign Up"
 }

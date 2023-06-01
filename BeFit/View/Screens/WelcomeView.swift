@@ -10,6 +10,7 @@ import SwiftUI
 
 struct WelcomeView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var navigationRoutes: NavigationRoutes
     
     var body: some View {
         VStack {
@@ -52,7 +53,9 @@ struct WelcomeView: View {
                 .opacity(0.1)
         }.edgesIgnoringSafeArea(.all))
         .padding([.leading, .trailing], 24)
-        
+        .onAppear {
+            authViewModel.setup(navigationRoutes: navigationRoutes)
+        }
     }
 }
 

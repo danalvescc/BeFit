@@ -14,6 +14,9 @@ struct User {
         var birthDate: Date
         var height: Double
         var weight: Double
+        var goal: String
+        var experience: String
+        var frequency: Int
     }
     
     struct Exercise {

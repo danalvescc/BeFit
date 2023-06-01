@@ -18,12 +18,12 @@ class AuthViewModel: ObservableObject {
     
     private let firebaseAuth = Auth.auth()
     
-    init() {
+//    init() {
 //        firebaseAuth.addStateDidChangeListener { auth, user in
 //            print("here")
 //            self.loadUserData()
 //        }
-    }
+//    }
     
     func setup(navigationRoutes: NavigationRoutes) {
         self.navigationRoutes = navigationRoutes
@@ -73,6 +73,7 @@ class AuthViewModel: ObservableObject {
                 print(error?.localizedDescription ?? "")
             } else {
                 self.updateName(name: name)
+                self.navigationRoutes?.navigate(.PersonalInfoView)
             }
         }
     }
@@ -81,6 +82,7 @@ class AuthViewModel: ObservableObject {
         do {
             try firebaseAuth.signOut()
             self.isLogged = false
+            navigationRoutes?.root()
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
